@@ -3,12 +3,15 @@ using TMPro;
 
 public class Clock : MonoBehaviour
 {
-    [Header("Component")]
-    private TMP_Text clockTime;
-    private int minute = 0;
-    private int hour = 6;
-    private bool isNoon = false;
+    [Header("References")]
+    public TMP_Text time;
+    public TMP_Text day;
+    public TMP_Text date;
 
+    [HideInInspector] public int minute = 0;
+    [HideInInspector] public int hour = 6;
+    private bool isNoon = false;
+    private string[] days = { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
 
     [Header("Timer Settings")]
     public float currentTime;
@@ -17,7 +20,6 @@ public class Clock : MonoBehaviour
     {
         isNoon = false;
         enabled = true;
-        clockTime = GetComponent<TMP_Text>();
     }
 
     private void Update()
@@ -66,11 +68,25 @@ public class Clock : MonoBehaviour
     {
         if(!isNoon)
         {
-            clockTime.text = "AM     " + hour.ToString() + " : " + minute.ToString("00");
+            time.text = "AM     " + hour.ToString() + " : " + minute.ToString("00");
         }
         else
         {
-            clockTime.text = "PM     " + hour.ToString() + " : " + minute.ToString("00");
+            time.text = "PM     " + hour.ToString() + " : " + minute.ToString("00");
         }
+    }
+
+    public void SavePlayer()
+    {
+        SaveSystem.SaveClock(this);
+    }
+
+    public void LoadPlayer()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        currentTime = data.currentTime;
+        hour = data.hour;
+        minute = data.minute;
     }
 }

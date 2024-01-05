@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainLevel.unity
+    path: Assets/Scenes/TitleScreen.unity
+    guid: 5a8f352999f30534fb92731d3b3fa136
+  - enabled: 1
+    path: Assets/Scenes/PlayerHouse.unity
+    guid: f47faddb9b56f2b4191797a8db41ff2c
+  - enabled: 1
+    path: Assets/Scenes/PlayerFarm.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects: {}

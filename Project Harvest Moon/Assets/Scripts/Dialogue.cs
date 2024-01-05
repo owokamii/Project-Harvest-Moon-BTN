@@ -26,7 +26,7 @@ public class Dialogue : MonoBehaviour
     private void Update()
     {
         // needs to be changed in the future
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
             if(texts.text == lines[index])
             {

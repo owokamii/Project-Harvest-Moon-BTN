@@ -1,0 +1,45 @@
+{
+    "name": "DialogueInput",
+    "maps": [
+        {
+            "name": "DialogueControls",
+            "id": "afab0477-0f3f-4cf5-b223-5b989cb18960",
+            "actions": [
+                {
+                    "name": "Enter",
+                    "type": "Button",
+                    "id": "8455250b-cf8a-40c4-b2d2-c8062c8c3901",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "afac0f08-78de-4660-acfd-02b9ba1a619c",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Enter",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "988aa9c7-386f-4990-8d36-ca32afef8af7",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Enter",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
